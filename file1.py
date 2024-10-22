@@ -3,7 +3,7 @@ dataset = pd.read_csv(r'C:\Users\sneha\Desktop\Fitness Tracker\fitness_tracker_d
 print(dataset.head(10))
 dataset.fillna(dataset.mean(),inplace=True)
 input_data = dataset[['steps','distance_km','workout_type','sleep_hours','weather_conditions','active_minutes']]
-output_data = dataset[['calories_burned','mood']]
+output_data = dataset[['calories_burned']]
 
 from sklearn.preprocessing import MinMaxScaler
 scaler=MinMaxScaler()
